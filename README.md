@@ -20,7 +20,7 @@ To contribute, fork off of the master branch, commit your updates, and then open
 - **git pull** - Updates the local repository with the master repository
 - **git add [file.txt]** - Adds files specified by the file name
 - **git commit -m "message" ** - Stages files to be pushed to the main repository with a message indicated in quotes
-- **git push [origin] [branch-name]** - Pushes a git branch to its source branch
+- **git push [remote-name] [branch-name]** - Pushes local branch to a remote branch(Example: `git push origin master`)
 - **git checkout [branch-name]** - Switches to specified branch
 
 ## Secondary
