@@ -1,6 +1,6 @@
 # Metrostate Android App
 
-Description
+The Metropolitan State University(MSU) mobile app provides access to information on what is going on and about Metrostate. Get instant access to campus events, cancellations, campus directory,campus maps, Gateway services, and social media. 
 
 # Getting Started
 
