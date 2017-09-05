@@ -1,14 +1,21 @@
 package com.russwilkie.metrostatemobile;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
+
+import com.russwilkie.metrostatemobile.activities.D2lActivity;
+import com.russwilkie.metrostatemobile.activities.DirectoryActivity;
+import com.russwilkie.metrostatemobile.activities.EservicesActivity;
+import com.russwilkie.metrostatemobile.activities.EventsActivity;
+import com.russwilkie.metrostatemobile.activities.GatewayActivity;
+import com.russwilkie.metrostatemobile.activities.HelpdeskActivity;
+import com.russwilkie.metrostatemobile.activities.LibraryActivity;
+import com.russwilkie.metrostatemobile.activities.MapsActivity;
+import com.russwilkie.metrostatemobile.activities.PortalActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +24,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    public void openGatewayActivity(View view){
+        Intent intent = new Intent(this, GatewayActivity.class);
+        startActivity(intent);
+    }
+
+    public void openDirectoryActivity(View view){
+        Intent intent = new Intent(this, DirectoryActivity.class);
+        startActivity(intent);
+    }
+    public void openHelpdeskActivity(View view){
+        Intent intent = new Intent(this, HelpdeskActivity.class);
+        startActivity(intent);
+    }
+    public void openD2lActivity(View view){
+        Intent intent = new Intent(this, D2lActivity.class);
+        startActivity(intent);
+    }
+    public void openEservicesActivity(View view){
+        Intent intent = new Intent(this, EservicesActivity.class);
+        startActivity(intent);
+    }
+    public void openEventsActivity(View view){
+        Intent intent = new Intent(this, EventsActivity.class);
+        startActivity(intent);
+    }
+    public void openLibraryActivity(View view){
+        Intent intent = new Intent(this, LibraryActivity.class);
+        startActivity(intent);
+    }
+    public void openMapsActivity(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+    public void openPortalActivity(View view){
+        Intent intent = new Intent(this, PortalActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -40,4 +85,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -18,6 +18,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.GatewayActivity"
+            android:label="@string/title_activity_gateway"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.DirectoryActivity"
+            android:label="@string/title_activity_directory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.HelpdeskActivity"
+            android:label="@string/title_activity_helpdesk"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.EventsActivity"
+            android:label="@string/title_activity_events"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LibraryActivity"
+            android:label="@string/title_activity_library"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.D2lActivity"
+            android:label="@string/title_activity_d2l"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.PortalActivity"
+            android:label="@string/title_activity_portal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.EservicesActivity"
+            android:label="@string/title_activity_eservices"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
