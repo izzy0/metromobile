@@ -10,6 +10,9 @@
     <string name="d2l">D2L</string>
     <string name="portal">Portal</string>
     <string name="eservices">eServices</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="linkedIn">LinkedIn</string>
     <string name="title_activity_directory_page">DirectoryPage</string>
     <string name="title_activity_gateway_page">GatewayPage</string>
     <string name="title_activity_helpdesk_page">HelpdeskPage</string>
@@ -27,4 +30,7 @@
     <string name="title_activity_d2l">D2lActivity</string>
     <string name="title_activity_portal">PortalActivity</string>
     <string name="title_activity_eservices">EservicesActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

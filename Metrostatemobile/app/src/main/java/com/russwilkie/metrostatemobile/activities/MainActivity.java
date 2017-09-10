@@ -1,12 +1,17 @@
-package com.russwilkie.metrostatemobile;
+package com.russwilkie.metrostatemobile.activities;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 
+import com.russwilkie.metrostatemobile.R;
+import com.russwilkie.metrostatemobile.SwipeAdapter;
 import com.russwilkie.metrostatemobile.activities.D2lActivity;
 import com.russwilkie.metrostatemobile.activities.DirectoryActivity;
 import com.russwilkie.metrostatemobile.activities.EservicesActivity;
@@ -18,12 +23,15 @@ import com.russwilkie.metrostatemobile.activities.MapsActivity;
 import com.russwilkie.metrostatemobile.activities.PortalActivity;
 
 public class MainActivity extends AppCompatActivity {
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        SwipeAdapter swipeAdapter = new SwipeAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(swipeAdapter);
     }
 
     public void openGatewayActivity(View view){
@@ -64,26 +72,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public void openFacebookPage(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/ChooseMetroState"));
+        startActivity(intent);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void openTwitterPage(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/choose_metro"));
+        startActivity(intent);
     }
 
+    public void openLinkedinPage(View view){
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/school/19685"));
+        startActivity(intent);
+    }
 }
