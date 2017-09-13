@@ -1,4 +1,36 @@
 <resources>
     <string name="app_name">Metrostatemobile</string>
     <string name="action_settings">Settings</string>
+    <string name="gateway">Gateway</string>
+    <string name="campus_directory">Campus Directory</string>
+    <string name="help_desk">Help Desk</string>
+    <string name="events">Events</string>
+    <string name="library">Library</string>
+    <string name="maps">Maps</string>
+    <string name="d2l">D2L</string>
+    <string name="portal">Portal</string>
+    <string name="eservices">eServices</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="linkedIn">LinkedIn</string>
+    <string name="title_activity_directory_page">DirectoryPage</string>
+    <string name="title_activity_gateway_page">GatewayPage</string>
+    <string name="title_activity_helpdesk_page">HelpdeskPage</string>
+    <string name="title_activity_events_page">EventsPage</string>
+    <string name="title_activity_library_page">LibraryPage</string>
+    <string name="title_activity_maps_page">MapsPage</string>
+    <string name="title_activity_gateway">GatewayActivity</string>
+    <string name="title_activity_directory">DirectoryActivity</string>
+    <string name="title_activity_helpdesk">HelpdeskActivity</string>
+    <string name="title_activity_events">EventsActivity</string>
+    <string name="title_activity_library">LibraryActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_d2_l">D2LActivity</string>
+    <string name="title_activity_d2lactivity">d2lactivity</string>
+    <string name="title_activity_d2l">D2lActivity</string>
+    <string name="title_activity_portal">PortalActivity</string>
+    <string name="title_activity_eservices">EservicesActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
