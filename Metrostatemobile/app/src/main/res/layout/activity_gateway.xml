@@ -16,10 +16,25 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" >
 
+            <TextView
+                android:id="@+id/gatewayHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gateway Services"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="22dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"/>
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_gateway" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 </android.support.design.widget.CoordinatorLayout>

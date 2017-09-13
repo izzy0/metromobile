@@ -82,8 +82,6 @@
             app:layout_constraintTop_toBottomOf="@+id/linkedinIcon"
             tools:text="@string/linkedIn"
             android:layout_marginStart="85dp" />
-
-
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
