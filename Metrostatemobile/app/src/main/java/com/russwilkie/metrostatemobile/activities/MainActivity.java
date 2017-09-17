@@ -3,25 +3,13 @@ package com.russwilkie.metrostatemobile.activities;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.content.Intent;
 
 import com.russwilkie.metrostatemobile.R;
-import com.russwilkie.metrostatemobile.SwipeAdapter;
-import com.russwilkie.metrostatemobile.activities.D2lActivity;
-import com.russwilkie.metrostatemobile.activities.DirectoryActivity;
-import com.russwilkie.metrostatemobile.activities.EservicesActivity;
-import com.russwilkie.metrostatemobile.activities.EventsActivity;
-import com.russwilkie.metrostatemobile.activities.GatewayActivity;
-import com.russwilkie.metrostatemobile.activities.HelpdeskActivity;
-import com.russwilkie.metrostatemobile.activities.LibraryActivity;
-import com.russwilkie.metrostatemobile.activities.MapsActivity;
-import com.russwilkie.metrostatemobile.activities.PortalActivity;
+import com.russwilkie.metrostatemobile.adapters.SwipeAdapter;
 
 public class MainActivity extends AppCompatActivity {
     //ViewPager viewPager;

@@ -1,4 +1,4 @@
-package com.russwilkie.metrostatemobile;
+package com.russwilkie.metrostatemobile.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
