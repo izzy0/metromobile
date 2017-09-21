@@ -74,11 +74,11 @@ public class ListViewAdapter extends BaseAdapter {
             switch (rowType) {
                 case TYPE_ITEM:
                     convertView = mInflater.inflate(R.layout.list_item, null);
-                    holder.textView = (TextView) convertView.findViewById(R.id.text);
+                    holder.textView = (TextView) convertView.findViewById(R.id.text1);
                     break;
                 case TYPE_SEPARATOR:
                     convertView = mInflater.inflate(R.layout.list_header, null);
-                    holder.textView = (TextView) convertView.findViewById(R.id.textSeparator);
+                    holder.textView = (TextView) convertView.findViewById(R.id.text1);
                     break;
             }
             convertView.setTag(holder);
