@@ -16,21 +16,115 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" >
+            app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay">
 
             <TextView
-                android:id="@+id/helpdeskHeader"
+                android:id="@+id/itsHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Help Desk"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="Information Technology"
                 android:textAlignment="center"
                 android:textColor="#fff"
-                android:textSize="22dp"
-                android:includeFontPadding="false"
-                android:lineSpacingExtra="0dp"/>
+                android:textSize="22dp" />
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_helpdesk" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/callButton"
+            android:layout_width="45dp"
+            android:layout_height="36dp"
+            app:srcCompat="@drawable/phone"
+            tools:layout_editor_absoluteX="323dp"
+            tools:layout_editor_absoluteY="156dp" />
+
+        <TextView
+            android:id="@+id/faxID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="651-793-1246"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="it.desk@metrostate.edu"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+        <TextView
+            android:id="@+id/phoneID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="651-793-1240"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <TextView
+            android:id="@+id/customerSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IT Customer Services"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+        <TextView
+            android:id="@+id/itservices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Information Technology(ITS)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <TextView
+            android:id="@+id/faxText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fax:"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="199dp" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="232dp" />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telephone:"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <ImageButton
+            android:id="@+id/emailButton"
+            android:layout_width="45dp"
+            android:layout_height="36dp"
+            app:srcCompat="@drawable/email"
+            tools:layout_editor_absoluteX="323dp"
+            tools:layout_editor_absoluteY="223dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours:"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="266dp" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>
