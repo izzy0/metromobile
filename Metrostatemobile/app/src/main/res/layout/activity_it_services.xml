@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.russwilkie.metrostatemobile.activities.HelpdeskActivity">
+    tools:context="com.russwilkie.metrostatemobile.activities.ItservicesActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -33,39 +33,48 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/itsInfo">
 
         <ImageButton
             android:id="@+id/callButton"
             android:layout_width="45dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/phone"
-            tools:layout_editor_absoluteX="323dp"
-            tools:layout_editor_absoluteY="156dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/customerSupport"
+            app:layout_constraintLeft_toRightOf="@+id/phoneID"
+            android:layout_marginLeft="70dp" />
 
         <TextView
             android:id="@+id/faxID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="651-793-1246"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="199dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/phoneID"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/phoneID" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/emailID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="it.desk@metrostate.edu"
-            tools:layout_editor_absoluteX="117dp"
-            tools:layout_editor_absoluteY="232dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/faxID"
+            app:layout_constraintLeft_toRightOf="@+id/emailText"
+            android:layout_marginLeft="50dp" />
 
         <TextView
             android:id="@+id/phoneID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="651-793-1240"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="168dp" />
+            android:layout_marginTop="32dp"
+            app:layout_constraintLeft_toRightOf="@+id/phoneText"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/customerSupport" />
 
         <TextView
             android:id="@+id/customerSupport"
@@ -73,8 +82,10 @@
             android:layout_height="wrap_content"
             android:text="IT Customer Services"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="130dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/itservices"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
             android:id="@+id/itservices"
@@ -83,48 +94,81 @@
             android:text="Information Technology(ITS)"
             android:textSize="24sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="69dp" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="104dp" />
 
         <TextView
             android:id="@+id/faxText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fax:"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="199dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/phoneText"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
             android:id="@+id/emailText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email:"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="232dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/faxText"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <TextView
             android:id="@+id/phoneText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telephone:"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="168dp" />
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/customerSupport"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <ImageButton
             android:id="@+id/emailButton"
             android:layout_width="45dp"
             android:layout_height="36dp"
             app:srcCompat="@drawable/email"
-            tools:layout_editor_absoluteX="323dp"
-            tools:layout_editor_absoluteY="223dp" />
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/callButton"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/callButton" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/hoursText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hours:"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="266dp" />
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailText"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/hoursID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hours"
+            app:layout_constraintLeft_toRightOf="@+id/hoursText"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailID" />
+
+         <ExpandableListView
+             android:id="@+id/services_list"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@+id/hoursID"
+             app:layout_constraintLeft_toRightOf="parent"
+             android:layout_marginLeft="0dp"
+             android:layout_marginTop="20dp">
+         </ExpandableListView>
+
     </android.support.constraint.ConstraintLayout>
 
 </android.support.design.widget.CoordinatorLayout>

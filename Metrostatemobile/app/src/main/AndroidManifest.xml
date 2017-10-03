@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.russwilkie.metrostatemobile">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,7 +29,7 @@
             android:label="@string/title_activity_directory"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.HelpdeskActivity"
+            android:name=".activities.ItservicesActivity"
             android:label="@string/title_activity_helpdesk"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -53,6 +55,14 @@
         <activity
             android:name=".activities.EservicesActivity"
             android:label="@string/title_activity_eservices"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FacebookActivity"
+            android:label="@string/title_activity_facebook"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.TwtitterActivity"
+            android:label="@string/title_activity_twtitter"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

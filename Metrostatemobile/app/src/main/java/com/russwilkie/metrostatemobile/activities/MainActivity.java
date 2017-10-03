@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout pageIndicator = (TabLayout) findViewById(R.id.tab_layout);
         pageIndicator.setupWithViewPager(viewPager);
         }
-
+0
     public void openGatewayActivity(View view){
         Intent intent = new Intent(this, GatewayActivity.class);
         startActivity(intent);
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openHelpdeskActivity(View view){
-        Intent intent = new Intent(this, HelpdeskActivity.class);
+        Intent intent = new Intent(this, ItservicesActivity.class);
         startActivity(intent);
     }
     public void openD2lActivity(View view){
@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFacebookPage(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/ChooseMetroState"));
+        Intent intent = new Intent(this, FacebookActivity.class);
         startActivity(intent);
     }
 
     public void openTwitterPage(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/choose_metro"));
+        Intent intent = new Intent(this, TwitterActivity.class);
         startActivity(intent);
     }
 

@@ -10,7 +10,7 @@ import android.webkit.WebView;
 
 import com.russwilkie.metrostatemobile.R;
 
-public class DirectoryActivity extends AppCompatActivity {
+public class TwtitterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class DirectoryActivity extends AppCompatActivity {
         webView.getSettings().setUseWideViewPort(true);
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
-        webView.loadUrl("http://www.metrostate.edu/student/university-info/university-info/university-directory");
+        webView.loadUrl("https://twitter.com/choose_metro");
     }
 
     @Override
@@ -39,3 +39,4 @@ public class DirectoryActivity extends AppCompatActivity {
         return true;
     }
 }
+
