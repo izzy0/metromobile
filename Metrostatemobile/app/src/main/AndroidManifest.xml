@@ -63,6 +63,10 @@
         <activity
             android:name=".activities.TwtitterActivity"
             android:label="@string/title_activity_twtitter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.LinkedInActivity"
+            android:label="@string/title_activity_linked_in"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

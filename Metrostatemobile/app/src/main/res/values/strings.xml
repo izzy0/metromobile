@@ -34,4 +34,5 @@
     <string name="gateway_header_text">Gateway Services Main Office</string>
     <string name="title_activity_facebook">FacebookActivity</string>
     <string name="title_activity_twtitter">TwtitterActivity</string>
+    <string name="title_activity_linked_in">LinkedInActivity</string>
 </resources>

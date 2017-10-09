@@ -11,12 +11,12 @@ import android.webkit.WebViewClient;
 
 import com.russwilkie.metrostatemobile.R;
 
-public class FacebookActivity extends AppCompatActivity {
+public class LinkedInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facebook);
+        setContentView(R.layout.activity_linked_in);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -31,7 +31,7 @@ public class FacebookActivity extends AppCompatActivity {
         webView.getSettings().setUseWideViewPort(true);
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
-        webView.loadUrl("https://www.facebook.com/ChooseMetroState");
+        webView.loadUrl("https://twitter.com/choose_metro");
     }
 
     @Override

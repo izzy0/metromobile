@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.russwilkie.metrostatemobile.activities.FacebookActivity">
+    tools:context="com.russwilkie.metrostatemobile.activities.LinkedInActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:id="@+id/directoryHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facebook"
+            android:text="LinkedIn"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="22dp"
@@ -40,6 +40,4 @@
             android:layout_height="match_parent"
             />
     </RelativeLayout>
-
-
 </android.support.design.widget.CoordinatorLayout>
