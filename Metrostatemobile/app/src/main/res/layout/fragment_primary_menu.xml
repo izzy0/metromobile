@@ -130,7 +130,7 @@
             android:layout_marginStart="35dp" />
 
         <ImageButton
-            android:id="@+id/helpdeskIcon"
+            android:id="@+id/itservicesIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="59dp"
@@ -142,16 +142,16 @@
             android:layout_marginStart="59dp" />
 
         <TextView
-            android:id="@+id/helpdeskLink"
+            android:id="@+id/itservicesLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="10dp"
-            android:text="@string/help_desk"
+            android:text="@string/it_services"
             app:layout_constraintLeft_toRightOf="@+id/directoryLink"
-            app:layout_constraintTop_toBottomOf="@+id/helpdeskIcon"
-            tools:text="@string/help_desk"
-            android:layout_marginStart="45dp" />
+            app:layout_constraintTop_toBottomOf="@+id/itservicesIcon"
+            tools:text="@string/it_services" />
 
         <ImageButton
             android:id="@+id/libraryIcon"
@@ -185,7 +185,7 @@
             android:layout_marginTop="49dp"
             android:onClick="openMapsActivity"
             app:layout_constraintLeft_toRightOf="@+id/libraryIcon"
-            app:layout_constraintTop_toBottomOf="@+id/helpdeskIcon"
+            app:layout_constraintTop_toBottomOf="@+id/itservicesIcon"
             app:srcCompat="@mipmap/ic_launcher"
             android:layout_marginStart="59dp" />
 

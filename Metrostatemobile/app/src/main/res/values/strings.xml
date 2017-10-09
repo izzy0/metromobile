@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="gateway">Gateway</string>
     <string name="campus_directory">Campus Directory</string>
-    <string name="help_desk">Help Desk</string>
+    <string name="it_services">IT Services</string>
     <string name="events">Events</string>
     <string name="library">Library</string>
     <string name="maps">Maps</string>
@@ -13,6 +13,7 @@
     <string name="facebook">Facebook</string>
     <string name="twitter">Twitter</string>
     <string name="linkedIn">LinkedIn</string>
+    <string name="hours">8 A.M. - 7 P.M. Monday-Thursday\n8 A.M. - 5 P.M. Friday\n8 A.M. - 1 P.M. Saturday\nClosed Sunday</string>
     <string name="title_activity_directory_page">DirectoryPage</string>
     <string name="title_activity_gateway_page">GatewayPage</string>
     <string name="title_activity_helpdesk_page">HelpdeskPage</string>
@@ -21,7 +22,7 @@
     <string name="title_activity_maps_page">MapsPage</string>
     <string name="title_activity_gateway">GatewayActivity</string>
     <string name="title_activity_directory">DirectoryActivity</string>
-    <string name="title_activity_helpdesk">HelpdeskActivity</string>
+    <string name="title_activity_helpdesk">Information Technology</string>
     <string name="title_activity_events">EventsActivity</string>
     <string name="title_activity_library">LibraryActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
@@ -30,7 +31,7 @@
     <string name="title_activity_d2l">D2lActivity</string>
     <string name="title_activity_portal">PortalActivity</string>
     <string name="title_activity_eservices">EservicesActivity</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gateway_header_text">Gateway Services Main Office</string>
+    <string name="title_activity_facebook">FacebookActivity</string>
+    <string name="title_activity_twtitter">TwtitterActivity</string>
 </resources>

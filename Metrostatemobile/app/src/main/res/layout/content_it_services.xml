@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.russwilkie.metrostatemobile.activities.HelpdeskActivity"
-    tools:showIn="@layout/activity_helpdesk">
+    tools:context="com.russwilkie.metrostatemobile.activities.ItservicesActivity"
+    tools:showIn="@layout/activity_it_services">
 
 </android.support.constraint.ConstraintLayout>

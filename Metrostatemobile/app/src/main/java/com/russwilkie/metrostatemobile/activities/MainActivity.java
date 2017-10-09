@@ -3,25 +3,13 @@ package com.russwilkie.metrostatemobile.activities;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.content.Intent;
 
 import com.russwilkie.metrostatemobile.R;
-import com.russwilkie.metrostatemobile.SwipeAdapter;
-import com.russwilkie.metrostatemobile.activities.D2lActivity;
-import com.russwilkie.metrostatemobile.activities.DirectoryActivity;
-import com.russwilkie.metrostatemobile.activities.EservicesActivity;
-import com.russwilkie.metrostatemobile.activities.EventsActivity;
-import com.russwilkie.metrostatemobile.activities.GatewayActivity;
-import com.russwilkie.metrostatemobile.activities.HelpdeskActivity;
-import com.russwilkie.metrostatemobile.activities.LibraryActivity;
-import com.russwilkie.metrostatemobile.activities.MapsActivity;
-import com.russwilkie.metrostatemobile.activities.PortalActivity;
+import com.russwilkie.metrostatemobile.adapters.SwipeAdapter;
 
 public class MainActivity extends AppCompatActivity {
     //ViewPager viewPager;
@@ -38,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout pageIndicator = (TabLayout) findViewById(R.id.tab_layout);
         pageIndicator.setupWithViewPager(viewPager);
         }
-
+0
     public void openGatewayActivity(View view){
         Intent intent = new Intent(this, GatewayActivity.class);
         startActivity(intent);
@@ -49,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openHelpdeskActivity(View view){
-        Intent intent = new Intent(this, HelpdeskActivity.class);
+        Intent intent = new Intent(this, ItservicesActivity.class);
         startActivity(intent);
     }
     public void openD2lActivity(View view){
@@ -78,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openFacebookPage(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/ChooseMetroState"));
+        Intent intent = new Intent(this, FacebookActivity.class);
         startActivity(intent);
     }
 
     public void openTwitterPage(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/choose_metro"));
+        Intent intent = new Intent(this, TwitterActivity.class);
         startActivity(intent);
     }
 
