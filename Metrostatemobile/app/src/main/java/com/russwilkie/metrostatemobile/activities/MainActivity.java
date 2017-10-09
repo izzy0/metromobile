@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout pageIndicator = (TabLayout) findViewById(R.id.tab_layout);
         pageIndicator.setupWithViewPager(viewPager);
         }
-0
+
     public void openGatewayActivity(View view){
         Intent intent = new Intent(this, GatewayActivity.class);
         startActivity(intent);
@@ -71,12 +71,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openTwitterPage(View view){
-        Intent intent = new Intent(this, TwitterActivity.class);
+        Intent intent = new Intent(this, TwtitterActivity.class);
         startActivity(intent);
     }
 
     public void openLinkedinPage(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/school/19685"));
+        Intent intent = new Intent(this, LinkedInActivity.class);
         startActivity(intent);
     }
 }
