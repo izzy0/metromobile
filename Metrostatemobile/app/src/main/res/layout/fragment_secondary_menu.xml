@@ -85,6 +85,31 @@
             app:layout_constraintTop_toBottomOf="@+id/linkedinIcon"
             tools:text="@string/linkedIn"
             android:layout_marginStart="85dp" />
+        <ImageButton
+            android:id="@+id/directoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0360a0"
+            android:onClick="openDirectoryActivity"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="49dp"
+            android:text="@string/campus_directory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facebookIcon"
+            app:srcCompat="@mipmap/ic_search"
+            android:layout_marginStart="25dp" />
+
+        <TextView
+            android:id="@+id/newsLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/campus_directory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/directoryIcon"
+            tools:text="@string/campus_directory"
+            android:layout_marginStart="32dp" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

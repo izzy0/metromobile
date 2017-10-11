@@ -79,4 +79,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LinkedInActivity.class);
         startActivity(intent);
     }
+
+    public void openNewsActivity(View view){
+        Intent intent = new Intent(this, NewsActivity.class);
+        startActivity(intent);
+    }
 }

@@ -67,6 +67,10 @@
         <activity
             android:name=".activities.LinkedInActivity"
             android:label="@string/title_activity_linked_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.NewsActivity"
+            android:label="@string/title_activity_news"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
