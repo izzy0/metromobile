@@ -75,10 +75,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="49dp"
+            android:backgroundTint="#0360a0"
             android:onClick="openEventsActivity"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gatewayIcon"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_calendar"
             android:layout_marginStart="25dp" />
 
         <ImageButton
@@ -87,10 +88,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="59dp"
             android:layout_marginTop="100dp"
+            android:backgroundTint="#0360a0"
             android:onClick="openDirectoryActivity"
             app:layout_constraintLeft_toRightOf="@+id/gatewayIcon"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_search"
             android:layout_marginStart="59dp" />
 
         <TextView
@@ -136,9 +138,10 @@
             android:layout_marginLeft="59dp"
             android:layout_marginTop="100dp"
             android:onClick="openHelpdeskActivity"
+            android:backgroundTint="#0360a0"
             app:layout_constraintLeft_toRightOf="@+id/directoryIcon"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_computer"
             android:layout_marginStart="59dp" />
 
         <TextView
@@ -160,9 +163,10 @@
             android:layout_marginLeft="59dp"
             android:layout_marginTop="22dp"
             android:onClick="openLibraryActivity"
+            android:backgroundTint="#0360a0"
             app:layout_constraintLeft_toRightOf="@+id/eventsIcon"
             app:layout_constraintTop_toBottomOf="@+id/directoryLink"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_book"
             android:layout_marginStart="59dp" />
 
         <TextView
@@ -184,9 +188,10 @@
             android:layout_marginLeft="59dp"
             android:layout_marginTop="49dp"
             android:onClick="openMapsActivity"
+            android:backgroundTint="#0360a0"
             app:layout_constraintLeft_toRightOf="@+id/libraryIcon"
             app:layout_constraintTop_toBottomOf="@+id/itservicesIcon"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_map"
             android:layout_marginStart="59dp" />
 
         <TextView
