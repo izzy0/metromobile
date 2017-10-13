@@ -31,6 +31,28 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_library" />
+    <ListView
+        android:id="@+id/libraryList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/divider_drawable"
+        android:dividerHeight="1px"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/libraryLink"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:padding="20px"
+            android:text="@string/libraryWebsiteLink"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp" />
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

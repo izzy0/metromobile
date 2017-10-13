@@ -62,7 +62,6 @@ public class GatewayActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-
         ListView listView = (ListView) findViewById(R.id.gatewayList);
         ImageAdapter adapter = new ImageAdapter(this, R.layout.main, R.id.text1, R.id.image1, listItems, imageNames, isHeader);
         listView.setAdapter(adapter);
