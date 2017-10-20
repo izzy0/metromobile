@@ -5,14 +5,11 @@ package com.russwilkie.metrostatemobile.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 
 import com.russwilkie.metrostatemobile.R;
 import com.russwilkie.metrostatemobile.adapters.ImageAdapter;
-import com.russwilkie.metrostatemobile.adapters.ListViewAdapter;
 
 public class GatewayActivity extends AppCompatActivity {
 

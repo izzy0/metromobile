@@ -13,13 +13,13 @@ import android.widget.TextView;
 import com.russwilkie.metrostatemobile.R;
 
 //For expandable list view use BaseExpandableListAdapter
-public class ListExpandableAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Context _context;
     private List<String> header; // header titles
     // Child data in format of header title, child title
     private HashMap<String, List<String>> child;
 
-    public ListExpandableAdapter(Context context, List<String> listDataHeader,
+    public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
         this._context = context;
         this.header = listDataHeader;
@@ -50,7 +50,7 @@ public class ListExpandableAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.listview_child, parent, false);
+            convertView = infalInflater.inflate(R.layout.explistview_child, parent, false);
         }
 
         TextView child_text = (TextView) convertView.findViewById(R.id.child);
@@ -96,7 +96,7 @@ public class ListExpandableAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.listview_header, parent, false);
+            convertView = infalInflater.inflate(R.layout.explistview_header, parent, false);
         }
 
         TextView header_text = (TextView) convertView.findViewById(R.id.header);
@@ -108,14 +108,14 @@ public class ListExpandableAdapter extends BaseExpandableListAdapter {
         if (isExpanded) {
             header_text.setTypeface(null, Typeface.BOLD);
             header_text.setCompoundDrawablesWithIntrinsicBounds(0, 0,
-                    R.drawable.ic_up, 0);
+                    R.drawable.ic_collapse, 0);
         } else {
             // If group is not expanded then change the text back into normal
             // and change the icon
 
             header_text.setTypeface(null, Typeface.NORMAL);
             header_text.setCompoundDrawablesWithIntrinsicBounds(0, 0,
-                    R.drawable.ic_down, 0);
+                    R.drawable.ic_expand, 0);
         }
 
         return convertView;
