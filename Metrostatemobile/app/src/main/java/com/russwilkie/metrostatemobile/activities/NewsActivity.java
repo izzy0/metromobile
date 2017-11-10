@@ -46,7 +46,7 @@ public class NewsActivity extends AppCompatActivity {
 
     //Fetches data from URL
     private void getData(){
-        StringRequest stringRequest = new StringRequest(Config.DATA_URL,
+        StringRequest stringRequest = new StringRequest(Config.NEWS_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -71,7 +71,7 @@ public class NewsActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        //do nothing
                     }
                 });
         com.android.volley.RequestQueue requestQueue = Volley.newRequestQueue(this);

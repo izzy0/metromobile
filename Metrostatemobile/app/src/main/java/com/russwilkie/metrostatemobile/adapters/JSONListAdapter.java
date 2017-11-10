@@ -39,9 +39,9 @@ public class JSONListAdapter extends ArrayAdapter<JSONObject> {
         TextView txtSex = (TextView) itemView.findViewById(R.id.txtdate);
 
         try {
-            txtId.setText(list.get(position).getString("news_header"));
-            txtName.setText(list.get(position).getString("news_summary"));
-            txtSex.setText(list.get(position).getString("news_date"));
+            txtId.setText(list.get(position).getString("header"));
+            txtName.setText(list.get(position).getString("summary"));
+            txtSex.setText(list.get(position).getString("date"));
 
 
         } catch (JSONException e) {

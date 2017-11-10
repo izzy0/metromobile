@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/scraper/db/connect.php</file>
+            <file>file:/C:/xampp/htdocs/scraper/db/convert_json.php</file>
+            <file>file:/C:/xampp/htdocs/scraper/data/news_scraper.php</file>
             <file>file:/C:/xampp/htdocs/scraper/db/db_config.php</file>
-            <file>file:/C:/xampp/htdocs/scraper/db/db_connect.php</file>
-            <file>file:/C:/xampp/htdocs/scraper/db/create_row.php</file>
+            <file>file:/C:/xampp/htdocs/scraper/data/event_scraper.php</file>
         </group>
     </open-files>
 </project-private>
