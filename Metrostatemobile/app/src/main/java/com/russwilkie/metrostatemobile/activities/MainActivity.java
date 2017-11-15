@@ -12,7 +12,6 @@ import com.russwilkie.metrostatemobile.R;
 import com.russwilkie.metrostatemobile.adapters.SwipeAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    //ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,22 +31,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openDirectoryActivity(View view){
-        Intent intent = new Intent(this, DirectoryActivity.class);
-        startActivity(intent);
-    }
     public void openHelpdeskActivity(View view){
         Intent intent = new Intent(this, ItservicesActivity.class);
         startActivity(intent);
     }
-    public void openD2lActivity(View view){
-        Intent intent = new Intent(this, D2lActivity.class);
+
+    public void openNewsActivity(View view){
+        Intent intent = new Intent(this, NewsActivity.class);
         startActivity(intent);
     }
-    public void openEservicesActivity(View view){
-        Intent intent = new Intent(this, EservicesActivity.class);
-        startActivity(intent);
-    }
+
     public void openEventsActivity(View view){
         Intent intent = new Intent(this, EventsActivity.class);
         startActivity(intent);
@@ -60,28 +53,52 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
+
+    public void openDirectoryActivity(View view){
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "Campus Directory");
+        intent.putExtra("url", "http://www.metrostate.edu/student/university-info/university-info/university-directory");
+        startActivity(intent);
+    }
+
+    public void openD2lActivity(View view){
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "D2L");
+        intent.putExtra("url", "https://metrostate.ims.mnscu.edu/");
+        startActivity(intent);
+    }
+    public void openEservicesActivity(View view){
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "eServices");
+        intent.putExtra("url", "https://webproc.mnscu.edu/esession/authentication.do?campusId=076&postAuthUrl=http%3A%2F%2Fwebproc.mnscu.edu%2Fregistration%2Fsecure%2Fsearch%2Fbasic.html%3Fcampusid%3D076&_ga=1.67796881.181785071.1407259054");
+        startActivity(intent);
+    }
+
     public void openPortalActivity(View view){
-        Intent intent = new Intent(this, PortalActivity.class);
+        //Cannot call WebViewerActivity as WebView conflicts with ASPX script
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://metronet.metrostate.edu/portal/default.aspx"));
         startActivity(intent);
     }
 
     public void openFacebookPage(View view){
-        Intent intent = new Intent(this, FacebookActivity.class);
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "Facebook");
+        intent.putExtra("url", "https://www.facebook.com/ChooseMetroState");
         startActivity(intent);
     }
 
     public void openTwitterPage(View view){
-        Intent intent = new Intent(this, TwtitterActivity.class);
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "Twitter");
+        intent.putExtra("url", "https://twitter.com/choose_metro");
         startActivity(intent);
     }
 
     public void openLinkedinPage(View view){
-        Intent intent = new Intent(this, LinkedInActivity.class);
+        Intent intent = new Intent(MainActivity.this, WebViewerActivity.class);
+        intent.putExtra("header", "LinkedIn");
+        intent.putExtra("url", "https://www.linkedin.com/school/19685");
         startActivity(intent);
-    }
 
-    public void openNewsActivity(View view){
-        Intent intent = new Intent(this, NewsActivity.class);
-        startActivity(intent);
     }
 }

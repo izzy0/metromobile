@@ -1,14 +1,21 @@
 package com.russwilkie.metrostatemobile.activities;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
+import com.russwilkie.metrostatemobile.LinkableItem;
 import com.russwilkie.metrostatemobile.R;
 import com.russwilkie.metrostatemobile.adapters.ExpandableListAdapter;
 
@@ -35,7 +42,7 @@ public class ItservicesActivity extends AppCompatActivity {
         expandableListView = (ExpandableListView) findViewById(R.id.simple_expandable_listview);
 
         LayoutInflater inflater = getLayoutInflater();
-        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.activity_it_services,expandableListView,false);
+        ViewGroup header = (ViewGroup) inflater.inflate(R.layout.activity_it_services, expandableListView, false);
         expandableListView.addHeaderView(header);
         // Setting group indicator null for custom indicator
         expandableListView.setGroupIndicator(null);
@@ -43,7 +50,38 @@ public class ItservicesActivity extends AppCompatActivity {
         setItems();
         setListener();
 
-}
+        ((ImageButton) findViewById(R.id.callButton)).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                if (ContextCompat.checkSelfPermission(ItservicesActivity.this,
+                        Manifest.permission.CALL_PHONE)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.shouldShowRequestPermissionRationale(ItservicesActivity.this,
+                            Manifest.permission.CALL_PHONE);
+                } else {
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse("tel:6517931240"));
+                    startActivity(callIntent);
+                }
+
+            }
+        });
+
+        ((ImageButton) findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","email@email.com", null));
+                startActivity(Intent.createChooser(intent, "Choose an Email client :"));
+
+            }
+        });
+
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -57,14 +95,14 @@ public class ItservicesActivity extends AppCompatActivity {
         ArrayList<String> header = new ArrayList<String>();
 
         // Array list for child items
-        List<String> inquiries = new ArrayList<String>();
-        List<String> newHere = new ArrayList<String>();
-        List<String> help = new ArrayList<String>();
-        List<String> software = new ArrayList<String>();
-        List<String> other = new ArrayList<String>();
+        List<LinkableItem> inquiries = new ArrayList<LinkableItem>();
+        List<LinkableItem> newHere = new ArrayList<LinkableItem>();
+        List<LinkableItem> help = new ArrayList<LinkableItem>();
+        List<LinkableItem> software = new ArrayList<LinkableItem>();
+        List<LinkableItem> other = new ArrayList<LinkableItem>();
 
         // Hash map for both header and child
-        HashMap<String, List<String>> hashMap = new HashMap<String, List<String>>();
+        HashMap<String, List<LinkableItem>> hashMap = new HashMap<String, List<LinkableItem>>();
 
         header.add("General Inquiries");
         header.add("I'm New Here");
@@ -73,16 +111,16 @@ public class ItservicesActivity extends AppCompatActivity {
         header.add("Other Services");
 
         // Adding general inqurey data
-        inquiries.add("Submit IT Request");
-        inquiries.add("Multimedia Services");
-        inquiries.add("Submit Web Request");
-        inquiries.add("D2L, Email, Mobile and Password");
-        inquiries.add("Help Setting up Wireless");
-        inquiries.add("Check status of IT Request or Web Request");
-        inquiries.add("University Projects");
+        inquiries.add(new LinkableItem("Submit IT Request", "http://www.google.com"));
+        inquiries.add(new LinkableItem("Multimedia Services", "http://www.yahoo.com"));
+        inquiries.add(new LinkableItem("Submit Web Request","http://www.metrostate.edu"));
+        inquiries.add(new LinkableItem("D2L, Email, Mobile and Password","http://www.cnn.com"));
+        inquiries.add(new LinkableItem("Help Setting up Wireless", "http://www.msn.com"));
+        inquiries.add(new LinkableItem("Check status of IT Request or Web Request", "http://www.codepen.io"));
+        inquiries.add(new LinkableItem("University Projects", "http://www.Github.com"));
 
         // Adding New Here data
-        newHere.add("E-mail");
+       /* newHere.add("E-mail");
         newHere.add("Microsoft Office 365");
         newHere.add("Wireless Network Access");
         newHere.add("Technology Resources for Community Faculty(.pdf)");
@@ -103,7 +141,7 @@ public class ItservicesActivity extends AppCompatActivity {
         // Adding Other Services data
         other.add("Computer Labs");
         other.add("Lisserv");
-        other.add("More...");
+        other.add("More...");*/
 
         // Adding header and childs to hash map
         hashMap.put(header.get(0), inquiries);
@@ -120,7 +158,6 @@ public class ItservicesActivity extends AppCompatActivity {
 
     // Setting different listeners to expandablelistview
     void setListener() {
-
 
         // This listener will expand one group at one time
         // You can remove this listener for expanding all groups
@@ -140,21 +177,24 @@ public class ItservicesActivity extends AppCompatActivity {
                     }
 
                 });
-
-        // This listener will show toast on child click
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
             public boolean onChildClick(ExpandableListView listview, View view,
                                         int groupPos, int childPos, long id) {
-                Toast.makeText(
-                        ItservicesActivity.this,
-                        "You clicked : " + adapter.getChild(groupPos, childPos),
-                        Toast.LENGTH_SHORT).show();
+                //Will pass ChildItem Links via Intent
+                String url = (String) adapter.getChildLink(groupPos, childPos);
+
+                Intent intent = new Intent(ItservicesActivity.this, WebViewerActivity.class);
+                intent.putExtra("header", "Information Technology");
+                intent.putExtra("url", url);
+                startActivity(intent);
+
                 return false;
             }
         });
     }
 
-
 }
+
+

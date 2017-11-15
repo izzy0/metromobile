@@ -1,22 +1,26 @@
 package com.russwilkie.metrostatemobile.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import com.russwilkie.metrostatemobile.R;
 
-public class FacebookActivity extends AppCompatActivity {
+public class WebViewerActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facebook);
+        setContentView(R.layout.activity_web_viewer);
+        final TextView setHeader = (TextView) findViewById(R.id.directoryHeader);
+        Intent intent = getIntent();
+
+        setHeader.setText(intent.getStringExtra("header"));
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -31,7 +35,7 @@ public class FacebookActivity extends AppCompatActivity {
         webView.getSettings().setUseWideViewPort(true);
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
-        webView.loadUrl("https://www.facebook.com/ChooseMetroState");
+        webView.loadUrl(intent.getStringExtra("url"));
     }
 
     @Override

@@ -10,17 +10,18 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.russwilkie.metrostatemobile.LinkableItem;
 import com.russwilkie.metrostatemobile.R;
 
 //For expandable list view use BaseExpandableListAdapter
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapter extends BaseExpandableListAdapter{
     private Context _context;
     private List<String> header; // header titles
     // Child data in format of header title, child title
-    private HashMap<String, List<String>> child;
+    private HashMap<String, List<LinkableItem>> child;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+                                 HashMap<String, List<LinkableItem>> listChildData) {
         this._context = context;
         this.header = listDataHeader;
         this.child = listChildData;
@@ -29,9 +30,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
 
-        // This will return the child
+        // This will return the child name
         return this.child.get(this.header.get(groupPosition)).get(
-                childPosititon);
+                childPosititon).getName();
+    }
+
+    public Object getChildLink(int groupPosition, int childPosititon) {
+        //This will return the child link
+        return this.child.get(this.header.get(groupPosition)).get(
+                childPosititon).getLink();
     }
 
     @Override
@@ -103,8 +110,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         header_text.setText(headerTitle);
 
-        // If group is expanded then change the text into bold and change the
-        // icon
+        // If group is expanded then change the text into bold and change the icon
         if (isExpanded) {
             header_text.setTypeface(null, Typeface.BOLD);
             header_text.setCompoundDrawablesWithIntrinsicBounds(0, 0,

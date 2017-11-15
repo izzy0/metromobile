@@ -3,6 +3,7 @@
     package="com.russwilkie.metrostatemobile">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -25,10 +26,6 @@
             android:label="@string/title_activity_gateway"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.DirectoryActivity"
-            android:label="@string/title_activity_directory"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".activities.ItservicesActivity"
             android:label="@string/title_activity_helpdesk"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -45,32 +42,12 @@
             android:label="@string/title_activity_maps"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.D2lActivity"
-            android:label="@string/title_activity_d2l"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.PortalActivity"
-            android:label="@string/title_activity_portal"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.EservicesActivity"
-            android:label="@string/title_activity_eservices"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.FacebookActivity"
-            android:label="@string/title_activity_facebook"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.TwtitterActivity"
-            android:label="@string/title_activity_twtitter"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.LinkedInActivity"
-            android:label="@string/title_activity_linked_in"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".activities.NewsActivity"
             android:label="@string/title_activity_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.WebViewerActivity"
+            android:label="@string/title_activity_web_viewer"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
