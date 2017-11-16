@@ -110,38 +110,37 @@ public class ItservicesActivity extends AppCompatActivity {
         header.add("Software and Safe Computing");
         header.add("Other Services");
 
-        // Adding general inqurey data
-        inquiries.add(new LinkableItem("Submit IT Request", "http://www.google.com"));
-        inquiries.add(new LinkableItem("Multimedia Services", "http://www.yahoo.com"));
-        inquiries.add(new LinkableItem("Submit Web Request","http://www.metrostate.edu"));
-        inquiries.add(new LinkableItem("D2L, Email, Mobile and Password","http://www.cnn.com"));
-        inquiries.add(new LinkableItem("Help Setting up Wireless", "http://www.msn.com"));
-        inquiries.add(new LinkableItem("Check status of IT Request or Web Request", "http://www.codepen.io"));
-        inquiries.add(new LinkableItem("University Projects", "http://www.Github.com"));
+        // Adding general Inqurey data
+        inquiries.add(new LinkableItem("Submit IT Request", "https://metrostateits.custhelp.com/app/ask"));
+        inquiries.add(new LinkableItem("Multimedia Services", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/other-services/multimedia-services"));
+        inquiries.add(new LinkableItem("Submit Web Request","https://metrostateits.custhelp.com/app/web-request"));
+        inquiries.add(new LinkableItem("D2L, Email, Mobile and Password","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-need-help/d2l-email-and-password-helps"));
+        inquiries.add(new LinkableItem("Help Setting up Wireless", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-am-new-here/wireless-network-access"));
+        inquiries.add(new LinkableItem("Check status of IT Request or Web Request", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/view-your-it-requests"));
+        inquiries.add(new LinkableItem("University Projects", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/university-projects"));
 
         // Adding New Here data
-       /* newHere.add("E-mail");
-        newHere.add("Microsoft Office 365");
-        newHere.add("Wireless Network Access");
-        newHere.add("Technology Resources for Community Faculty(.pdf)");
-        newHere.add("More...");
-
+        newHere.add(new LinkableItem("E-mail", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-am-new-here/student-faculty-and-staff-email"));
+        newHere.add(new LinkableItem("Microsoft Office 365","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-am-new-here/microsoft-office-365"));
+        newHere.add(new LinkableItem("Wireless Network Access", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-am-new-here/wireless-network-access"));
+        newHere.add(new LinkableItem("Technology Resources for Community Faculty(.pdf)","http://www.metrostate.edu/Documents/information-technology-services/cf-orientation-spring-2017-4DB5.pdf"));
+        newHere.add(new LinkableItem("More...", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-am-new-here"));
 
         // Adding I Need Help data
-        help.add("FAQs");
-        help.add("Understanding ID/Username");
-        help.add("Reset Passwords/PINs");
-        help.add("More...");
+        help.add(new LinkableItem("FAQs", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-need-help/faqs"));
+        help.add(new LinkableItem("Understanding ID/Username", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-need-help/understanding-ids-and-usernames"));
+        help.add(new LinkableItem("Reset Passwords/PINs", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-need-help/tech-id-student-id"));
+        help.add(new LinkableItem("More...","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/i-need-help"));
 
         // Adding Software and Safe Computing data
-        software.add("Network Storage(Home Drive Access(H:))");
-        software.add("Security Resource Links");
-        software.add("More...");
+        software.add(new LinkableItem("Network Storage(Home Drive Access(H:))", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/software-and-safe-computing/network-storage"));
+        software.add(new LinkableItem("Security Resource Links","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/software-and-safe-computing/security-resource-links"));
+        software.add(new LinkableItem("More...", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/software-and-safe-computing"));
 
         // Adding Other Services data
-        other.add("Computer Labs");
-        other.add("Lisserv");
-        other.add("More...");*/
+        other.add(new LinkableItem("Computer Labs","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/other-services/computer-labs"));
+        other.add(new LinkableItem("Lisserv", "http://www.metrostate.edu/student/university-info/university-info/information-technology-services/other-services/listserv"));
+        other.add(new LinkableItem("More...","http://www.metrostate.edu/student/university-info/university-info/information-technology-services/other-services"));
 
         // Adding header and childs to hash map
         hashMap.put(header.get(0), inquiries);
@@ -196,5 +195,3 @@ public class ItservicesActivity extends AppCompatActivity {
     }
 
 }
-
-
