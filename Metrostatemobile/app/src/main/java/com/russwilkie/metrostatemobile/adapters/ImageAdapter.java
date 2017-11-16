@@ -2,13 +2,18 @@ package com.russwilkie.metrostatemobile.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import com.russwilkie.metrostatemobile.*;
+import com.russwilkie.metrostatemobile.activities.MainActivity;
+import com.russwilkie.metrostatemobile.activities.WebViewerActivity;
 
 public class ImageAdapter extends ArrayAdapter
 {
@@ -62,6 +67,7 @@ public class ImageAdapter extends ArrayAdapter
 
         return convertView;
     }
+
 
     public static int getImageId(Context con, String imageName) {
         return con.getResources().getIdentifier("drawable/" + imageName, null, con.getPackageName());

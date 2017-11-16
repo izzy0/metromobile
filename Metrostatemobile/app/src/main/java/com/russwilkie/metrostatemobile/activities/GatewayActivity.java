@@ -2,10 +2,19 @@ package com.russwilkie.metrostatemobile.activities;
 
 //TO DO POST-BACK: Turn arrays into a key-value pair for headers and items.
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.russwilkie.metrostatemobile.R;
@@ -62,6 +71,32 @@ public class GatewayActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.gatewayList);
         ImageAdapter adapter = new ImageAdapter(this, R.layout.main, R.id.text1, R.id.image1, listItems, imageNames, isHeader);
         listView.setAdapter(adapter);
+
+        //Handles touch events
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView parent, View v,
+                                    int position, long id) {
+                switch((int) id){
+                    case 1:
+                        if (ContextCompat.checkSelfPermission(GatewayActivity.this,
+                                Manifest.permission.CALL_PHONE)
+                                != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.shouldShowRequestPermissionRationale(GatewayActivity.this,
+                                    Manifest.permission.CALL_PHONE);
+                        } else {
+                            Intent callIntent = new Intent(Intent.ACTION_CALL);
+                            callIntent.setData(Uri.parse("tel:6517931330"));
+                            startActivity(callIntent);
+                        }
+                    case 2:
+                        Intent intent = new Intent(GatewayActivity.this, WebViewerActivity.class);
+                        intent.putExtra("header", "Gateway");
+                        intent.putExtra("url", "http://metro-gateway.custhelp.com/");
+                        startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
@@ -69,4 +104,5 @@ public class GatewayActivity extends AppCompatActivity {
         onBackPressed();
         return true;
     }
+
 }
