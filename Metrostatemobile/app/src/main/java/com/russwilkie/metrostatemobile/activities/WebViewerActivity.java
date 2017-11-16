@@ -36,6 +36,9 @@ public class WebViewerActivity extends AppCompatActivity {
         webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webView.setScrollbarFadingEnabled(false);
         webView.loadUrl(intent.getStringExtra("url"));
+
+        intent.removeExtra("url");
+        intent.removeExtra("header");
     }
 
     @Override

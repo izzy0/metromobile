@@ -77,7 +77,9 @@ public class GatewayActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView parent, View v,
                                     int position, long id) {
+                Intent intent = new Intent(GatewayActivity.this, WebViewerActivity.class);
                 switch((int) id){
+                    //Call Number
                     case 1:
                         if (ContextCompat.checkSelfPermission(GatewayActivity.this,
                                 Manifest.permission.CALL_PHONE)
@@ -89,11 +91,19 @@ public class GatewayActivity extends AppCompatActivity {
                             callIntent.setData(Uri.parse("tel:6517931330"));
                             startActivity(callIntent);
                         }
+                    //Go to AskUs Page
                     case 2:
-                        Intent intent = new Intent(GatewayActivity.this, WebViewerActivity.class);
-                        intent.putExtra("header", "Gateway");
+                        intent.putExtra("header", "Gateway Services");
                         intent.putExtra("url", "http://metro-gateway.custhelp.com/");
                         startActivity(intent);
+                    case 4:
+                        //To-Do
+                    case 5:
+                        //To-Do
+                    case 6:
+                        //To-Do
+                    case 7:
+                        //To-Do
                 }
             }
         });
