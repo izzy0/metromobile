@@ -48,6 +48,10 @@
         <activity
             android:name=".activities.WebViewerActivity"
             android:label="@string/title_activity_web_viewer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ListViewLinkActivity"
+            android:label="@string/title_activity_list_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

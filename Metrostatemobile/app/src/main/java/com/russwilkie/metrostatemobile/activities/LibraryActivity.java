@@ -1,14 +1,8 @@
 package com.russwilkie.metrostatemobile.activities;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
@@ -85,39 +79,121 @@ public class LibraryActivity extends AppCompatActivity {
                 Intent intent = new Intent(LibraryActivity.this, WebViewerActivity.class);
                 intent.putExtra("header", "Library");
                 switch((int) id){
-                    //Hours
-                    case 1:
+                    case 1: {
+                        //Hours
                         intent.putExtra("url", "http://metrostate.libcal.com/");
                         break;
-                    //Find Books
-                    case 2:
+                    }
+                    case 2: {
+                        //Find Books
                         //Cannot use WebView as One Search breaks on web viewer
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://metrostate.summon.serialssolutions.com/"));
                         break;
-                    //Reserve a Study Room
-                    case 3:
+                    }
+                    case 3: {
+                        //Reserve a Study Room
                         intent.putExtra("url", "https://mplus.mnpals.net/booking/patron_MTR_005881814.html");
                         break;
-                    //Ask a Librarian
-                    case 4:
+                    }
+                    case 4: {
+                        //Ask a Librarian
                         intent.putExtra("url", "https://www.questionpoint.org/crs/qwidgetV4/patronChatQwidget.jsp?langcode=1&instid=13879&ts=1507922258905&skin=blue&size=standard&referer=http%3A%2F%2Fwww.metrostate.edu%2Fstudent%2Flearning-resources%2Flearning-resources%2Flibrary-and-information-services");
                         break;
-                    //Find Course Resources
-                    case 5:
+                    }
+                    case 5: {
+                        //Find Course Resources
                         intent.putExtra("url", "https://libguides.metrostate.edu/er.php?");
                         break;
-                    //Services
-                    case 6:
-                        //To-Do
+                    }
+                    case 6: {
+                        //Services
+                        String[] items = {"Checkouts and Renewals", "Alumni and Community", "Faculty Resources",
+                                "Physical Spaces", "Library Classes", "Events and Programs",
+                                "Computers and Printing", "Suggest a Purchase"};
+                        String[] images = {"arrow", "arrow", "arrow", "arrow", "arrow", "arrow",
+                                "arrow", "arrow"};
+                        String[] links = {
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/checkouts-and-renewals",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/alumni-and-community",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/library-faculty-resources",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/physical-spaces",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/library-classes-and-instruction",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/events-and-programs",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/computers-and-printing",
+                                "https://libguides.metrostate.edu/purchase"
+                        };
+                        boolean[] isHeader = {false, false, false, false, false, false, false,
+                                false};
+
+                        intent = new Intent(LibraryActivity.this, ListViewLinkActivity.class);
+                        intent.putExtra("header", "Services");
+                        intent.putExtra("items", items);
+                        intent.putExtra("images", images);
+                        intent.putExtra("links", links);
+                        intent.putExtra("isHeader", isHeader);
+                        break;
+                    }
+                    case 7: {
                         //Research
-                    case 7:
+                        String[] items = {"Get Help", "Research Guides", "Database A-Z",
+                                "List of Journals", "Library Catalog / MnPALS", "Cite Your Sources",
+                                "Interlibrary Loan", "View Your Library Account"};
+                        String[] images = {"arrow", "arrow", "arrow", "arrow", "arrow", "arrow",
+                                "arrow", "arrow"};
+                        String[] links = {
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/get-library-help",
+                                "https://libguides.metrostate.edu/",
+                                "https://libguides.metrostate.edu/az.php",
+                                "https://browzine.com/libraries/456/subjects",
+                                "https://metrostate.mplus.mnpals.net/vufind/?mylocn=MTR",
+                                "https://libguides.metrostate.edu/cite-sources",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/interlibrary-loan",
+                                "https://metrostate.mplus.mnpals.net/vufind/MyResearch/Home?mylocn=MTR"
+                        };
+                        boolean[] isHeader = {false, false, false, false, false, false, false,
+                                false};
+
+                        intent = new Intent(LibraryActivity.this, ListViewLinkActivity.class);
+                        intent.putExtra("header", "Research");
+                        intent.putExtra("items", items);
+                        intent.putExtra("images", images);
+                        intent.putExtra("links", links);
+                        intent.putExtra("isHeader", isHeader);
+                        break;
+                    }
+                    case 8: {
+                        //Contact Us
                         //To-Do
-                    //Contact Us
-                    case 8:
-                        //To-Do
-                    //About the Library
-                    case 9:
-                        //To-Do
+                    }
+                    case 9: {
+                        //About the Library
+                        String[] items = {"Policies", "History and Mission", "Archives",
+                                "Staff Directory", "FAQ", "Giving to the Library", "Hours",
+                                "Library Location", "Get an ID"};
+                        String[] images = {"arrow", "arrow", "arrow", "arrow", "arrow", "arrow",
+                                "arrow", "arrow", "arrow"};
+                        String[] links = {
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/library-policies",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/history-and-mission",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/archives",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/staff-directory",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/faq",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/giving-to-the-library",
+                                "http://metrostate.libcal.com/",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/library-location",
+                                "http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services/get-an-id"
+                        };
+                        boolean[] isHeader = {false, false, false, false, false, false, false,
+                                false, false};
+
+                        intent = new Intent(LibraryActivity.this, ListViewLinkActivity.class);
+                        intent.putExtra("header", "About The Library");
+                        intent.putExtra("items", items);
+                        intent.putExtra("images", images);
+                        intent.putExtra("links", links);
+                        intent.putExtra("isHeader", isHeader);
+                        break;
+                    }
                 }
                 startActivity(intent);
             }
