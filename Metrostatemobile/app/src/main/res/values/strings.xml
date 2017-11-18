@@ -15,6 +15,7 @@
     <string name="twitter">Twitter</string>
     <string name="linkedIn">LinkedIn</string>
     <string name="hours">8 A.M. - 7 P.M. Monday-Thursday\n8 A.M. - 5 P.M. Friday\n8 A.M. - 1 P.M. Saturday\nClosed Sunday</string>
+    <string name="libraryAddress">654 E 7th Street\nSaint Paul, Minnesota 55106</string>
     <string name="libraryWebsiteLink"><a href="http://www.metrostate.edu/student/learning-resources/learning-resources/library-and-information-services">Visit Full Website</a></string>
     <string name="title_activity_directory_page">DirectoryPage</string>
     <string name="title_activity_gateway_page">GatewayPage</string>

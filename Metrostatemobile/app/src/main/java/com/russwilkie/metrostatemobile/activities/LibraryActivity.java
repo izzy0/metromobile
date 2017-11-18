@@ -3,6 +3,9 @@ package com.russwilkie.metrostatemobile.activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
@@ -13,6 +16,7 @@ import android.widget.TextView;
 
 import com.russwilkie.metrostatemobile.R;
 import com.russwilkie.metrostatemobile.adapters.ImageAdapter;
+import com.russwilkie.metrostatemobile.fragments.LibraryContactFragment;
 
 public class LibraryActivity extends AppCompatActivity {
 
@@ -163,7 +167,11 @@ public class LibraryActivity extends AppCompatActivity {
                     }
                     case 8: {
                         //Contact Us
-                        //To-Do
+                        LibraryContactFragment fragment = new LibraryContactFragment();
+                        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.libraryContainer, fragment);
+                        transaction.commit();
+                        break;
                     }
                     case 9: {
                         //About the Library
@@ -195,7 +203,9 @@ public class LibraryActivity extends AppCompatActivity {
                         break;
                     }
                 }
-                startActivity(intent);
+                if((int) id != 8) {
+                    startActivity(intent);
+                }
             }
         });
 

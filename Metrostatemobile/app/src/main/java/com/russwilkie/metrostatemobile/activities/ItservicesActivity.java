@@ -75,7 +75,7 @@ public class ItservicesActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto","email@email.com", null));
+                        "mailto","it.services@metrostate.edu", null));
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
 
             }
