@@ -14,7 +14,7 @@
             android:id="@+id/portalIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_portal"
             android:layout_marginTop="49dp"
             app:layout_constraintTop_toBottomOf="@+id/libraryIcon"
             app:layout_constraintLeft_toRightOf="@+id/d2lIcon"
@@ -38,7 +38,7 @@
             android:id="@+id/d2lIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_d2l"
             android:layout_marginTop="49dp"
             android:onClick="openD2lActivity"
             app:layout_constraintTop_toBottomOf="@+id/eventsIcon"
@@ -116,7 +116,7 @@
             android:onClick="openGatewayActivity"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_gateway"
             android:layout_marginStart="25dp" />
 
         <TextView
@@ -215,7 +215,7 @@
             android:onClick="openEservicesActivity"
             app:layout_constraintLeft_toRightOf="@+id/portalIcon"
             app:layout_constraintTop_toBottomOf="@+id/mapsIcon"
-            app:srcCompat="@mipmap/ic_launcher"
+            app:srcCompat="@mipmap/ic_eservices"
             android:layout_marginStart="59dp" />
 
         <TextView
