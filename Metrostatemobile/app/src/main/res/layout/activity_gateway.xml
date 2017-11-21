@@ -30,7 +30,11 @@
                 android:lineSpacingExtra="0dp"/>
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
-
+    <RelativeLayout
+        android:id="@+id/gatewayContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
     <ListView
         android:id="@+id/gatewayList"
         android:layout_width="match_parent"
@@ -38,4 +42,5 @@
         android:divider="@drawable/divider_drawable"
         android:dividerHeight="1px"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
