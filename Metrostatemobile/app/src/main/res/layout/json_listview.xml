@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    >
+    android:layout_margin="10dp">
+    <!--android:background="@drawable/border">-->
 
     <TextView
         android:id="@+id/txtheader"
@@ -13,6 +14,17 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textStyle="bold"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:id="@+id/txtdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textColor="#000"
         />
 
     <TextView
@@ -20,14 +32,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:textColor="#000"
         />
 
     <TextView
-        android:id="@+id/txtdate"
+        android:id="@+id/clickmore"
+        android:gravity="right"
+        android:text="Read More..."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="#00F"
         android:layout_weight="1"
-        android:textStyle="italic"
         />
-
 </LinearLayout>

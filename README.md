@@ -8,6 +8,7 @@ Before you begin, you need to install [Android Studio](https://developer.android
 
 Be sure to also have an updated version of [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed on your machine as well.
 
+For the Web Scraper you will need to have a clean version of [XAMPP](https://www.google.com/search?q=xampp&ie=utf-8&oe=utf-8&client=firefox-b-1-ab) and an IDE that supports PHP
 
 # Contributing
 

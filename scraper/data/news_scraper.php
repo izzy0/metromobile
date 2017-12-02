@@ -23,5 +23,5 @@ $json_data = json_encode(array('result' => $newsArticles),JSON_UNESCAPED_SLASHES
 file_put_contents('../json/news.json', $json_data);
 
 function keep_html_entities($str){
-    return html_entity_decode($str,ENT_QUOTES);
+    return trim(html_entity_decode($str,ENT_QUOTES));
 }
