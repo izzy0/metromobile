@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Metrostatemobile.iml" filepath="$PROJECT_DIR$/Metrostatemobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\izhar\Documents\GitHub\metromobile\Metrostatemobile\Metrostatemobile.iml" filepath="C:\Users\izhar\Documents\GitHub\metromobile\Metrostatemobile\Metrostatemobile.iml" />
+      <module fileurl="file://C:\Users\izhar\Documents\GitHub\metromobile\Metrostatemobile\app\app.iml" filepath="C:\Users\izhar\Documents\GitHub\metromobile\Metrostatemobile\app\app.iml" />
     </modules>
   </component>
 </project>
