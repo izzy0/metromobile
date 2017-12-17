@@ -44,4 +44,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_web_viewer">WebViewerActivity</string>
     <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="nmetrostate_mobile_app">Metrostate Mobile App</string>
 </resources>

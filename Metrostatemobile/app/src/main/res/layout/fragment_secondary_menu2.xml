@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.russwilkie.metrostatemobile.fragments.SecondaryMenuFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.russwilkie.metrostatemobile.activities.MainActivity">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/firstRowGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/verticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <ImageButton
+            android:id="@+id/twitterIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:onClick="openTwitterPage"
+            app:layout_constraintLeft_toRightOf="@+id/facebookIcon"
+            app:layout_constraintTop_toTopOf="@id/firstRowGuideline"
+            app:backgroundTint="#0360a0"
+            app:srcCompat="@mipmap/ic_twitter"
+            android:layout_marginStart="54dp" />
+
+        <TextView
+            android:id="@+id/twitterLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/twitter"
+            app:layout_constraintLeft_toRightOf="@+id/facebookLink"
+            app:layout_constraintTop_toBottomOf="@+id/twitterIcon"
+            tools:text="@string/twitter" />
+
+        <ImageButton
+            android:id="@+id/facebookIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openFacebookPage"
+            app:backgroundTint="#0360a0"
+            app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+            app:layout_constraintTop_toTopOf="@id/firstRowGuideline"
+            app:srcCompat="@mipmap/ic_facebook" />
+
+        <TextView
+            android:id="@+id/facebookLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/facebook"
+            app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/facebookIcon"
+            tools:text="@string/facebook" />
+
+        <ImageButton
+            android:id="@+id/linkedinIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:onClick="openLinkedinPage"
+            app:backgroundTint="#0360a0"
+            app:layout_constraintLeft_toRightOf="@+id/twitterIcon"
+            app:layout_constraintTop_toTopOf="@id/firstRowGuideline"
+            app:srcCompat="@mipmap/ic_linkedin"
+            android:layout_marginStart="54dp" />
+
+        <TextView
+            android:id="@+id/linkedinLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/linkedIn"
+            app:layout_constraintLeft_toRightOf="@+id/twitterLink"
+            app:layout_constraintTop_toBottomOf="@+id/linkedinIcon"
+            tools:text="@string/linkedIn" />
+        <ImageButton
+            android:id="@+id/directoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="#0360a0"
+            android:onClick="openDirectoryActivity"
+            android:layout_marginTop="49dp"
+            android:text="@string/campus_directory"
+            app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/facebookIcon"
+            app:srcCompat="@mipmap/ic_search" />
+
+        <TextView
+            android:id="@+id/directoryLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:text="@string/campus_directory"
+            app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/directoryIcon"
+            tools:text="@string/campus_directory"/>
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

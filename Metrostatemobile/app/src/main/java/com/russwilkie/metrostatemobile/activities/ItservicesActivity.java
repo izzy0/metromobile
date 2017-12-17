@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.russwilkie.metrostatemobile.LinkableItem;
 import com.russwilkie.metrostatemobile.R;
@@ -50,26 +51,25 @@ public class ItservicesActivity extends AppCompatActivity {
         setItems();
         setListener();
 
-        ((ImageButton) findViewById(R.id.callButton)).setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.callButton)).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                if (ContextCompat.checkSelfPermission(ItservicesActivity.this,
-                        Manifest.permission.CALL_PHONE)
-                        != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.shouldShowRequestPermissionRationale(ItservicesActivity.this,
-                            Manifest.permission.CALL_PHONE);
-                } else {
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:6517931240"));
-                    startActivity(callIntent);
-                }
+                    askPermission();
+                    try{
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:6517931240"));
+                        startActivity(callIntent);
+
+                    } catch (SecurityException e){
+                        Toast.makeText(ItservicesActivity.this, "Need permission to call", Toast.LENGTH_SHORT).show();
+                    }
 
             }
         });
 
-        ((ImageButton) findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
+        (findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -192,6 +192,16 @@ public class ItservicesActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private Boolean askPermission(){
+        if (ContextCompat.checkSelfPermission(ItservicesActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(ItservicesActivity.this, new String[]{Manifest.permission.CALL_PHONE}, MainActivity.REQUEST_CODE_PHONE_CALL );
+            return true;
+
+        } else {
+            return false;
+        }
     }
 
 }

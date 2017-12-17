@@ -51,6 +51,7 @@ public class ImageAdapter extends ArrayAdapter
                 if (arrows[pos] != null) {
                     convertView = inflater.inflate(layoutId, null);
                     ImageView icon = (ImageView) convertView.findViewById(imageId);
+
                     icon.setImageResource(getImageId(context, arrows[pos]));
                 } else {
                     convertView = inflater.inflate(R.layout.list_item, null);

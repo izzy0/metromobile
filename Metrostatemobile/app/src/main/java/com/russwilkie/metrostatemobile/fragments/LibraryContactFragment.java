@@ -16,10 +16,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.russwilkie.metrostatemobile.R;
 import com.russwilkie.metrostatemobile.activities.ItservicesActivity;
 import com.russwilkie.metrostatemobile.activities.LibraryActivity;
+import com.russwilkie.metrostatemobile.activities.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,18 +48,24 @@ public class LibraryContactFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        ((ImageButton) getView().findViewById(R.id.callButton)).setOnClickListener(new View.OnClickListener() {
+        (getView().findViewById(R.id.callButton)).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:6517931616"));
-                startActivity(callIntent);
+                askPermission();
+                    try{
+                        Intent callIntent = new Intent(Intent.ACTION_CALL);
+                        callIntent.setData(Uri.parse("tel:6517931616"));
+                        startActivity(callIntent);
+
+                    }catch (SecurityException e){
+                        Toast.makeText(getContext(), "Need Permission to call", Toast.LENGTH_SHORT).show();
+                    }
             }
         });
 
-        ((ImageButton) getView().findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
+        (getView().findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -68,6 +76,16 @@ public class LibraryContactFragment extends Fragment {
 
             }
         });
+    }
+
+    private Boolean askPermission(){
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE}, MainActivity.REQUEST_CODE_PHONE_CALL );
+            return true;
+
+        } else {
+            return false;
+        }
     }
 
 }
